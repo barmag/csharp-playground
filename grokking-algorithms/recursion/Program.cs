@@ -17,10 +17,20 @@ namespace recursion
 
             return elements[0] + sum(elements.Skip(1).Take(elements.Length - 1).ToArray());
         }
+
+        static int recursiveCont(int[] source)
+        {
+            if (source .Length == 0)
+            {
+                return 0;
+            }
+            var count = 1 + recursiveCont(source.Skip(1).Take(source.Length - 1).ToArray());
+            return count;
+        }
         static void Main(string[] args)
         {
             var elements = Enumerable.Range(0, 10).ToArray();
-            
+            var count = recursiveCont(elements);
             var result = sum(elements);
         }
     }
