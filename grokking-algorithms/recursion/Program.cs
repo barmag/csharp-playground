@@ -27,10 +27,22 @@ namespace recursion
             var count = 1 + recursiveCont(source.Skip(1).Take(source.Length - 1).ToArray());
             return count;
         }
+
+        static int maxRecursive(int[] arr)
+        {
+            if (arr.Length == 1)
+                return arr[0];
+            if (arr.Length == 2)
+                return arr[0] > arr[1] ? arr[0] : arr[1];
+            var tempMax = maxRecursive(arr.Skip(1).Take(arr.Length - 1).ToArray());
+            var max = arr[0] > tempMax ? arr[0] : tempMax;
+            return max;
+        }
         static void Main(string[] args)
         {
             var elements = Enumerable.Range(0, 10).ToArray();
             var count = recursiveCont(elements);
+            var max = maxRecursive(elements);
             var result = sum(elements);
         }
     }
