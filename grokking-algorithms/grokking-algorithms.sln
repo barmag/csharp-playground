@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chapter-1", "chapter-1\chap
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "selection-sort", "selection-sort\selection-sort.csproj", "{9BCB9A0C-4DE3-40B5-8B9F-0D93201146C7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "recursion", "recursion\recursion.csproj", "{CFE24F15-CD17-4157-AF8E-B7BE9AEFD312}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{9BCB9A0C-4DE3-40B5-8B9F-0D93201146C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9BCB9A0C-4DE3-40B5-8B9F-0D93201146C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9BCB9A0C-4DE3-40B5-8B9F-0D93201146C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CFE24F15-CD17-4157-AF8E-B7BE9AEFD312}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CFE24F15-CD17-4157-AF8E-B7BE9AEFD312}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CFE24F15-CD17-4157-AF8E-B7BE9AEFD312}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CFE24F15-CD17-4157-AF8E-B7BE9AEFD312}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
