@@ -65,6 +65,36 @@ namespace graph_dfs_bfs
             }
             return false;
         }
+
+        public bool hasPathBFS(int srcid, int destid)
+        {
+            Node src = getNode(srcid);
+            Node dest = getNode(destid);
+            LinkedList<Node> nextToVist = new LinkedList<Node>();
+            HashSet<int> visited = new HashSet<int>();
+            nextToVist.AddLast(src);
+            while (nextToVist.Count != 0)
+            {
+                var node = nextToVist.First.Value;
+                nextToVist.RemoveFirst();
+                if (node == dest)
+                {
+                    return true;
+                }
+                if (!visited.Contains(node.id))
+                {
+                    visited.Add(node.id);
+                } else
+                {
+                    continue;
+                }
+                foreach (var child in node.adjacent)
+                {
+                    nextToVist.AddFirst(child);
+                }
+            }
+            return false;
+        }
     }
     class Program
     {
@@ -78,8 +108,10 @@ namespace graph_dfs_bfs
             g.addEdge(3, 6);
             g.addEdge(6, 1);
             var res = g.hasPathDFS(3, 2);
+            res = g.hasPathBFS(3, 2);
             g.addEdge(5, 0);
             res = g.hasPathDFS(3, 2);
+            res = g.hasPathBFS(3, 2);
         }
     }
 }
