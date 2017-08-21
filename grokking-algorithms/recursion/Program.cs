@@ -85,6 +85,23 @@ namespace recursion
             cache[n] = result;
             return result;
         }
+
+        void shiftArray()
+        {
+            var input = new int[] { 3, 6, 76, 8 };
+
+            var shifted = new int[input.Length];
+            var shift = 2;
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                var newIndex = i - shift;
+                newIndex = newIndex < 0 ? input.Length - newIndex : newIndex;
+                shifted[newIndex] = input[i];
+            }
+            Console.WriteLine(string.Join(" ", shifted));
+        }
+
         static long Fibonacci(int n)
         {
             return FibCached(n, new Dictionary<int, int>());
