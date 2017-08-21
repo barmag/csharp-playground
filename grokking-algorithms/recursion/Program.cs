@@ -65,6 +65,30 @@ namespace recursion
             if (index == -1) return -1;
             return mid + index;
         }
+
+        static int FibCached(int n, Dictionary<int, int> cache)
+        {
+            if (n == 0)
+            {
+                return 0;
+            }
+            if (n == 1)
+            {
+                return 1;
+            }
+            if (cache.ContainsKey(n))
+            {
+                return cache[n];
+            }
+
+            var result = FibCached(n - 1, cache) + FibCached(n - 2, cache);
+            cache[n] = result;
+            return result;
+        }
+        static long Fibonacci(int n)
+        {
+            return FibCached(n, new Dictionary<int, int>());
+        }
         static void Main(string[] args)
         {
             var elements = Enumerable.Range(0, 10).ToArray();
@@ -75,6 +99,7 @@ namespace recursion
             var s3 = binarySearchRecursive(0, elements);
             var s5 = binarySearchRecursive(1, elements);
             var s4 = binarySearchRecursive(-5, elements);
+            var fib = Fibonacci(60);
             var result = sum(elements);
         }
     }

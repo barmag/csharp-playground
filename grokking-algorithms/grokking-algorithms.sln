@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "quick-sort", "quick-sort\qu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "graph-dfs-bfs", "graph-dfs-bfs\graph-dfs-bfs.csproj", "{70D187F0-62CD-43C4-B9FD-51907CDABC0E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "find-all-perms-s-b", "find-all-perms-s-b\find-all-perms-s-b.csproj", "{348CBE6D-17DE-4149-8D0C-A5D90908EE5B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{70D187F0-62CD-43C4-B9FD-51907CDABC0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70D187F0-62CD-43C4-B9FD-51907CDABC0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70D187F0-62CD-43C4-B9FD-51907CDABC0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{348CBE6D-17DE-4149-8D0C-A5D90908EE5B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{348CBE6D-17DE-4149-8D0C-A5D90908EE5B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{348CBE6D-17DE-4149-8D0C-A5D90908EE5B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{348CBE6D-17DE-4149-8D0C-A5D90908EE5B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
