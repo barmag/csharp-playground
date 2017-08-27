@@ -35,8 +35,19 @@ namespace explore_csharp_7
         }
         static void Main(string[] args)
         {
+            //tuples
             var fibresult = Fibonacci(20);
             Console.WriteLine($"Fibonacci of 20 is {fibresult}");
+
+            //out variables
+            GetCoordinates(out int x, out int y);
+            Console.WriteLine($"Out varibles {x} and {y}");
+        }
+
+        private static void GetCoordinates(out int x, out int y)
+        {
+            x = 5;
+            y = 10;
         }
     }
 }
