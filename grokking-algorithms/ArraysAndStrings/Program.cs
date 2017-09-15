@@ -8,10 +8,15 @@ namespace ArraysAndStrings
 {
     class IsUnique
     {
-        private static bool IsOverMaxCharsetLength(string word)
+        private static int GetMaxLength()
         {
             // assuming only english alpha characters are allowed
-            var max_length = ('z' - 'a') + ('Z' - 'A');
+            var max_length = 'z' - 'A';
+            return max_length;
+        }
+        private static bool IsOverMaxCharsetLength(string word)
+        {
+            var max_length = GetMaxLength();
             // if the length of the word is larger than the unique chars count
             // Then there must be a repetiotion ... exit
             if (word.Length > max_length || word.Length < 2)
@@ -68,6 +73,32 @@ namespace ArraysAndStrings
             }
             return true;
         }
+
+        /// <summary>
+        /// Implementation with a bool array for character occurunces
+        /// </summary>
+        /// <param name="word"></param>
+        /// <returns></returns>
+        public static bool CharsInString_boolArray(string word)
+        {
+            if (IsOverMaxCharsetLength(word))
+            {
+                return false;
+            }
+            var max_length = GetMaxLength();
+            var charOccurunce = new bool[max_length];
+
+            foreach (var c in word)
+            {
+                var index = Convert.ToInt32(c) - Convert.ToInt32('A');
+                if (charOccurunce[index])
+                {
+                    return false;
+                }
+                charOccurunce[index] = true;
+            }
+            return true;
+        }
     }
     class Program
     {
@@ -81,6 +112,9 @@ namespace ArraysAndStrings
 
             Console.WriteLine("Hello world: {0}", IsUnique.CharsInString_sorting(c1));
             Console.WriteLine("unique: {0}", IsUnique.CharsInString_sorting(c2));
+
+            Console.WriteLine("Hello world: {0}", IsUnique.CharsInString_boolArray(c1));
+            Console.WriteLine("unique: {0}", IsUnique.CharsInString_boolArray(c2));
         }
     }
 }
