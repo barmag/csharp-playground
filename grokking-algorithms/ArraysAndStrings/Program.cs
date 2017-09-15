@@ -8,6 +8,19 @@ namespace ArraysAndStrings
 {
     class IsUnique
     {
+        private static bool IsOverMaxCharsetLength(string word)
+        {
+            // assuming only english alpha characters are allowed
+            var max_length = ('z' - 'a') + ('Z' - 'A');
+            // if the length of the word is larger than the unique chars count
+            // Then there must be a repetiotion ... exit
+            if (word.Length > max_length || word.Length < 2)
+            {
+                return true;
+            }
+            return false;
+        }
+
         /// <summary>
         /// Tests if a the characters in a string are unique
         /// Brute force implementation
@@ -17,11 +30,7 @@ namespace ArraysAndStrings
         /// <returns></returns>
         public static bool CharsInString_Brute(string word)
         {
-            // assuming only english alpha characters are allowed
-            var max_length = ('z' - 'a') + ('Z' - 'A');
-            // if the length of the word is larger than the unique chars count
-            // Then there must be a repetiotion ... exit
-            if (word.Length > max_length) return false;
+            if (IsOverMaxCharsetLength(word)) return false;
 
             //var chars = word.ToCharArray();
             int currentIndex = 0;
@@ -47,12 +56,8 @@ namespace ArraysAndStrings
         /// <returns></returns>
         public static bool CharsInString_sorting(string word)
         {
-            // assuming only english alpha characters are allowed
-            var max_length = ('z' - 'a') + ('Z' - 'A');
-            // if the length of the word is larger than the unique chars count
-            // Then there must be a repetiotion ... exit
-            if (word.Length > max_length || word.Length < 2) return false;
-            
+            if (IsOverMaxCharsetLength(word)) return false;
+
             var chars = word.OrderBy(c => c).ToArray();
             for (int i = 0; i < chars.Length-1; i++)
             {
