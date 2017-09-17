@@ -104,6 +104,26 @@ namespace ArraysAndStrings
     {
         static void Main(string[] args)
         {
+            //RunIsUnique();
+            RunCheckPermtation();
+        }
+
+        private static void RunCheckPermtation()
+        {
+            var permutationChecker = new PermutationChecker();
+
+            string s1 = "hello", s2 = "lehlo";
+            var isPerm = permutationChecker.Check(s1, s2);
+            Console.WriteLine($"{s1} is a permutation of {s2}: {isPerm}");
+
+            s1 = "random word";
+            s2 = "randum word";
+            isPerm = permutationChecker.Check(s1, s2);
+            Console.WriteLine($"{s1} is a permutation of {s2}: {isPerm}");
+        }
+
+        private static void RunIsUnique()
+        {
             var c1 = "Hello World!";
             var c2 = "Unique";
 
