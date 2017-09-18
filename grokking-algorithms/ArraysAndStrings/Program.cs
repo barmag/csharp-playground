@@ -105,7 +105,18 @@ namespace ArraysAndStrings
         static void Main(string[] args)
         {
             //RunIsUnique();
-            RunCheckPermtation();
+            //RunCheckPermtation();
+            RunPermIsPalindrome();
+        }
+
+        private static void RunPermIsPalindrome()
+        {
+            string w1 = "Tact coa";
+            string w2 = "not a palindrome";
+            bool isPalindrome = PermIsPalindrom.Check(w1);
+            Console.WriteLine($"{w1} should be palindrome: {isPalindrome}");
+            isPalindrome = PermIsPalindrom.Check(w2);
+            Console.WriteLine($"{w2} should return false: {isPalindrome}");
         }
 
         private static void RunCheckPermtation()
