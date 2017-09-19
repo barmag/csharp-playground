@@ -106,7 +106,21 @@ namespace ArraysAndStrings
         {
             //RunIsUnique();
             //RunCheckPermtation();
-            RunPermIsPalindrome();
+            //RunPermIsPalindrome();
+            RunOneAway();
+        }
+
+        private static void RunOneAway()
+        {
+            string s1 = "pale", s2 = "ple";
+            bool oneAway = OneAway.Check(s1, s2);
+            Console.WriteLine($"{s1}, {s2} should be true: {oneAway}");
+            s1 = "pales"; s2 = "pale";
+            Console.WriteLine($"{s1}, {s2} should be true: {oneAway}");
+            s1 = "pale"; s2 = "bale";
+            Console.WriteLine($"{s1}, {s2} should be true: {oneAway}");
+            s1 = "pale"; s2 = "bake";
+            Console.WriteLine($"{s1}, {s2} should be false");
         }
 
         private static void RunPermIsPalindrome()
