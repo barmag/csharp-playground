@@ -107,7 +107,18 @@ namespace ArraysAndStrings
             //RunIsUnique();
             //RunCheckPermtation();
             //RunPermIsPalindrome();
-            RunOneAway();
+            //RunOneAway();
+            RunStringCompression();
+        }
+
+        private static void RunStringCompression()
+        {
+            string compressed = StringCompression.Compress("abcaaabbb");
+            System.Diagnostics.Debug.Assert(compressed == "abca3b3");
+            compressed = StringCompression.Compress("abcd");
+            System.Diagnostics.Debug.Assert(compressed == "abcd");
+            compressed = StringCompression.Compress("aaabaaaaccaaaaba");
+            System.Diagnostics.Debug.Assert(compressed == "a3ba4c2a4ba");
         }
 
         private static void RunOneAway()
