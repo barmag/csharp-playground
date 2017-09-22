@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -108,7 +109,19 @@ namespace ArraysAndStrings
             //RunCheckPermtation();
             //RunPermIsPalindrome();
             //RunOneAway();
-            RunStringCompression();
+            //RunStringCompression();
+            RunRotateMatrix();
+        }
+
+        private static void RunRotateMatrix()
+        {
+            int[,] matrix = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
+            int[,] expected = { { 2, 4, 6 }, { 1, 3, 5 } };
+            int[,] result = Matrix.Rotate90(matrix);
+            matrix = new int[,] { { 1, 2, 3 }, { 4, 5, 6}, { 7, 8, 9 } };
+            expected = new int[,] { { 3, 6, 9 }, { 2, 5, 8 }, { 1, 4, 7 } };
+            result = Matrix.Rotate90(matrix);
+            
         }
 
         private static void RunStringCompression()
