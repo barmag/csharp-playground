@@ -110,7 +110,14 @@ namespace ArraysAndStrings
             //RunPermIsPalindrome();
             //RunOneAway();
             //RunStringCompression();
-            RunRotateMatrix();
+            //RunRotateMatrix();
+            RunReduceString();
+        }
+
+        private static void RunReduceString()
+        {
+            var input = "aaabccddd";
+            var s = StringCompression.SuperReduceString(input);
         }
 
         private static void RunRotateMatrix()
