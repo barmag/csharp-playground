@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace ArraysAndStrings
@@ -36,31 +38,25 @@ namespace ArraysAndStrings
 
         internal static string SuperReduceString(string s)
         {
-            var buffer = new StringBuilder();
+            var result = new Stack<char>(); 
 
-            for (int index = 0; index < s.Length; index++)
+            for (int i = 0; i < s.Length; i++)
             {
-                if (index+1 < s.Length)
+                char current = s[i];
+                if (result.Count != 0 && result.Peek() == current)
                 {
-                    if (s[index] != s[index+1])
-                    {
-                        buffer.Append(s[index]);
-                    }
-                    else
-                    {
-                        index++;
-                    }
+                    result.Pop();
                 }
                 else
                 {
-                    if (index == s.Length-1)
-                    {
-                        buffer.Append(s[index]);
-                    }
+                    result.Push(current);
                 }
             }
-            
-            return buffer.ToString();
+            if (result.Count == 0)
+            {
+                return "Empty String";
+            }
+            return string.Join("", result.ToArray().Reverse());
         }
     }
 }

@@ -118,6 +118,7 @@ namespace ArraysAndStrings
         {
             var input = "aaabccddd";
             var s = StringCompression.SuperReduceString(input);
+            s = StringCompression.SuperReduceString("baab");
         }
 
         private static void RunRotateMatrix()
