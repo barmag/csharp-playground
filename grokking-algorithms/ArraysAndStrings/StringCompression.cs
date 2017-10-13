@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 
 namespace ArraysAndStrings
 {
@@ -57,6 +58,20 @@ namespace ArraysAndStrings
                 return "Empty String";
             }
             return string.Join("", result.ToArray().Reverse());
+        }
+
+        internal static string SuperReduceStringRegex(string s)
+        {
+            while (true)
+            {
+                int len = s.Length;
+                s = Regex.Replace(s, "(.)\\1", "");
+                if (s.Length == len)
+                {
+                    break;
+                }
+            }
+            return s;
         }
     }
 }
