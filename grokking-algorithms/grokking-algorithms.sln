@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.3
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chapter-1", "chapter-1\chapter-1.csproj", "{6D860925-7A3E-46CB-8A73-AC5043691741}"
 EndProject
@@ -20,6 +20,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ransome-note", "ransome-note\ransome-note.csproj", "{CDA9939D-C17E-484D-BBD6-4B566F337E60}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArraysAndStrings", "ArraysAndStrings\ArraysAndStrings.csproj", "{EA29AC50-0F1F-417E-9899-84F1596E8FD0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedLists", "LinkedLists\LinkedLists.csproj", "{A43F850B-81A0-4C5D-B176-1C3CE9339163}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{EA29AC50-0F1F-417E-9899-84F1596E8FD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EA29AC50-0F1F-417E-9899-84F1596E8FD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EA29AC50-0F1F-417E-9899-84F1596E8FD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A43F850B-81A0-4C5D-B176-1C3CE9339163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A43F850B-81A0-4C5D-B176-1C3CE9339163}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A43F850B-81A0-4C5D-B176-1C3CE9339163}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A43F850B-81A0-4C5D-B176-1C3CE9339163}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
