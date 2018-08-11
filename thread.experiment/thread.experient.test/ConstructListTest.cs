@@ -9,7 +9,7 @@ namespace thread.experient.test
         [TestMethod]
         public void VerifyLength()
         {
-            var max = 1000;
+            var max = 100000;
             var listConstructor = new ConstructList();
             var list = listConstructor.Generate(max);
             Assert.AreEqual(max, list.Count);
